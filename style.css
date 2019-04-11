@@ -91,7 +91,7 @@ body, input, textarea {
 	font: 18px Georgia, serif;
 	font-weight: normal;
 	line-height: 27px;
-	background: #fff6db repeat fixed;
+	background:  url(style/images/light-bullet.png) repeat-x fixed; /* #fff6db repeat fixed; */
 	color: #6b6b6b;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-size-adjust: 100%;
@@ -1630,7 +1630,7 @@ p.form-submit {
 	line-height: 2.2em;
 	padding: 1.2em 0.5em;
 	text-align: center;
-	background-color: #131313;
+	background-color: #FFFFFF; /*#131313 */
 }
 #site-generator a {
 	color: #999;
