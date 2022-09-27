@@ -49,7 +49,7 @@ h6 {
 	font-weight: 300;
 	letter-spacing: 0.4px;
 	font-family: "Open Sans", Sans-serif;
-	color: #232323;
+	color: #000000; /*#232323;*/
 }
 
 p {
@@ -65,16 +65,9 @@ p {
 color: #B1B1B1;	
 }
 
-a:hover, a:focus, a:active, a.active {
-	color: #fec503;
-}
-a, a:hover, a:focus, a:active, a.active {
-	outline: 0;
-}
-
 ::selection {
 	text-shadow: none;
-	background: #fed136;
+	background: #fedb67; /*#fed136;*/
 }
 
 @media (min-width: 768px) {
@@ -114,6 +107,38 @@ section ul li:before {
 	color: #23AD21;
 }
 
+a:link {
+  color: #0000cc; /*#0000e6;*/
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0000cc;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff3300;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ff3300;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:focus, a.active {
+	color: #ff3300; /*#fec503; */
+}
+a, a:hover, a:focus, a:active, a.active {
+	outline: 0;
+}
+
+
 /*--------------------
 1.1 Reset bootstrap
 --------------------*/
@@ -133,7 +158,7 @@ section ul li:before {
 --------------------*/
 
 .navbar-default {
-	background-color: #222;
+	background-color: #ffffcc; /*#f2f2f2; /*#222;*/
 	border-color: transparent
 }
 .navbar-default .navbar-brand {
@@ -142,21 +167,21 @@ section ul li:before {
 	padding: 0px;
 }
 .navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand.active {
-	color: #fec503;
+	color: #ff3300; /*#fec503;*/
 }
 .navbar-default .navbar-collapse {
 	border-color: rgba(255,255,255,.02);
 
 }
 .navbar-default .navbar-toggle {
-	background-color: #fed136;
-	border-color: #fed136
+	background-color: #ff3300; /*#fed136;*/
+	border-color: #ff3300 /*#fed136*/
 }
 .navbar-default .navbar-toggle .icon-bar {
 	background-color: #fff
 }
 .navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus {
-	background-color: #fed136
+	background-color: #ff3300; /*#fed136*/
 }
 .navbar-default .nav li a {
 	font-family: "Roboto",sans-serif;
@@ -166,18 +191,18 @@ section ul li:before {
 	color:#000;
 }
 .navbar-default .nav li a:hover,.navbar-default .nav li a:focus {
-	color: #fed136;
+	color: #ff3300; /*#fed136;*/
 	outline: 0;
 }
 
 .navbar-default .navbar-nav>.active>a {
 	border-radius: 0;
 	color: #fff;
-	background-color: #fed136
+	background-color: #ff3300 /*#fed136*/
 }
 .navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
 	color: #fff;
-	background-color: #fec503
+	background-color: #ff3300
 }
 
 @media (min-width:768px) {
@@ -215,7 +240,7 @@ section ul li:before {
 --------------------*/
 
 header {
-	background-image: url(../images/demo/bg.jpg);
+	background-image: none; /*url(../images/demo/bg.jpg);*/
 	background-repeat: none;
 	background-attachment: scroll;
 	background-position: center center;
@@ -501,7 +526,7 @@ figure.effect-bubba:hover p {
 --------------------*/
 
 .light-bg {
-	background-color: #f8f8f8;
+	background-color: #fafeff; /*#f2fafd; /*#f8f8f8;*/
 }
 
 .dark-bg {
