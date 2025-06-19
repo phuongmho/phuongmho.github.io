@@ -899,3 +899,28 @@ iframe{
   height: 100%;
   border: 1;
 }
+
+
+/*--------------------
+Toggle for abstract
+--------------------*/
+/* details summary toggles */
+details summary::-webkit-details-marker { display: none; }
+details summary::marker         { display: none; }
+
+details summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+/* closed state: show “+” */
+details:not([open]) summary::before {
+  content: "+ ";
+  font-weight: bold;
+}
+
+/* open state: show “–” */
+details[open] summary::before {
+  content: "– ";
+  font-weight: bold;
+}
