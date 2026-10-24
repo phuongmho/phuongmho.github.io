@@ -1,0 +1,43 @@
+/* Layout and manual figure controls only; typography and colors use style.css. */
+.research-page [hidden] { display: none !important; }
+.research-content > section { padding: 0; margin-bottom: 30px; }
+.research-content .research-intro { margin-bottom: 30px; }
+.paper-showcase {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 30px;
+    margin-bottom: 36px;
+    align-items: start;
+}
+.paper-copy { min-width: 0; }
+.paper-copy details { margin-top: 12px; }
+.research-page summary { cursor: pointer; }
+.research-page details[open] summary { margin-bottom: 10px; }
+.research-gallery { min-width: 0; }
+.research-slide { margin: 0 0 12px; background: transparent; text-align: left; cursor: auto; }
+.figure-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 3 / 2;
+    background: #fff;
+}
+.figure-link img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.research-slide figcaption { position: static; height: auto; font-size: 13px; line-height: 1.6; margin-top: 10px; }
+.gallery-controls { display: flex; align-items: center; justify-content: flex-end; gap: 14px; }
+.gallery-status { font-size: 12px; font-variant-numeric: tabular-nums; }
+.research-page .text-paper { margin-bottom: 30px; }
+.other-working-papers p { margin-bottom: 24px; }
+.research-page footer .container { max-width: 100%; }
+.research-page a:focus-visible,
+.research-page button:focus-visible,
+.research-page summary:focus-visible { outline: 2px solid #0000cc; outline-offset: 3px; }
+
+@media (max-width: 991px) {
+    .paper-showcase { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+}
+@media (max-width: 767px) {
+    .research-page #about { padding-top: 110px; }
+    .research-page .navbar-collapse:not([data-menu-ready]) { display: block; }
+    .paper-copy { overflow-wrap: anywhere; }
+}

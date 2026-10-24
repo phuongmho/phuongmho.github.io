@@ -1,0 +1,105 @@
+/* Topic filters and display controls for the research page. */
+.research-interactive {
+    --research-nav-height: 82px;
+    --research-toolbar-height: 150px;
+    --research-cell-border: #d8e1e5;
+    --research-cell-bg: #f1f6f7;
+    --research-control-ink: #1b314b;
+}
+.research-interactive #about { padding-top: calc(var(--research-nav-height) + 36px); }
+.research-interactive .research-fields-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 22px;
+}
+.research-interactive .research-fields-label,
+.research-interactive .toolbar-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+    color: #5d5d5d;
+    margin-right: 4px;
+}
+.research-interactive .field-chip,
+.research-interactive .referee-journal {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 7px 12px;
+    border: 1px solid var(--research-cell-border);
+    border-radius: 6px;
+    background: var(--research-cell-bg);
+    color: var(--research-control-ink);
+    font-size: 14px;
+    line-height: 1.55;
+}
+.research-interactive .research-toolbar {
+    position: sticky;
+    top: calc(var(--research-nav-height) + 12px);
+    z-index: 90;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+    margin-bottom: 32px;
+    border: 1px solid var(--research-cell-border);
+    border-radius: 8px;
+    background: #fafeff;
+    box-shadow: 0 3px 12px rgb(27 49 75 / 5%);
+}
+.research-interactive .toolbar-group { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.research-interactive .filter-btn,
+.research-interactive .utility-btn,
+.research-interactive .section-jump-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 11px;
+    border: 1px solid var(--research-cell-border);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--research-control-ink);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: none;
+}
+.research-interactive button { cursor: pointer; }
+.research-interactive .filter-btn:hover,
+.research-interactive .utility-btn:hover,
+.research-interactive .section-jump-links a:hover { border-color: #246a73; background: #e7f2f3; }
+.research-interactive .filter-btn[aria-pressed="true"],
+.research-interactive .utility-btn[aria-pressed="true"] { background: var(--research-control-ink); border-color: var(--research-control-ink); color: #fff; }
+.research-interactive .filter-count { font-weight: 400; }
+.research-interactive .section-jump-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding-top: 12px;
+    border-top: 1px solid var(--research-cell-border);
+}
+.research-interactive main > section { scroll-margin-top: calc(var(--research-nav-height) + var(--research-toolbar-height) + 32px); }
+.research-interactive .filter-status { margin: -16px 0 24px; font-size: 13px; color: #56616c; }
+.research-interactive .referee-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.research-interactive .referee-journal { font-family: Georgia, serif; font-size: 15px; font-style: italic; }
+.research-interactive.is-compact-view .research-gallery { display: none; }
+.research-interactive.is-compact-view .paper-showcase { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 991px) {
+    .research-interactive .research-toolbar { position: static; }
+    .research-interactive main > section { scroll-margin-top: calc(var(--research-nav-height) + 20px); }
+}
+@media (max-width: 767px) {
+    .research-interactive #about { padding-top: calc(var(--research-nav-height) + 28px); }
+    .research-interactive .research-fields-label { flex-basis: 100%; }
+    .research-interactive .research-toolbar { padding: 12px; }
+}
+@media print {
+    .research-interactive .research-toolbar, .research-interactive .filter-status { display: none !important; }
+}

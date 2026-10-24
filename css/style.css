@@ -84,6 +84,17 @@ section {
 	padding: 70px 0;
 }
 
+/* Keep the first content below the fixed navigation, including wrapped menus. */
+body.nav-spacing #about {
+    padding-top: calc(var(--site-nav-height, 82px) + 36px);
+}
+
+@media (max-width: 767px) {
+    body.nav-spacing #about {
+        padding-top: calc(var(--site-nav-height, 82px) + 28px);
+    }
+}
+
 ul {
 	padding-left: 0;
 	padding-top: 10px;	
@@ -161,6 +172,17 @@ a, a:hover, a:focus, a:active, a.active {
 2. Navigation
 --------------------*/
 
+.navbar .site-name {
+    font-family: monospace;
+    font-size: 30pt;
+    letter-spacing: 10px;
+    color: #c80000;
+}
+
+@media (max-width: 767px) {
+    .navbar .site-name { font-size: clamp(22px, 6vw, 30px); letter-spacing: 4px; }
+}
+
 .navbar-default {
 	background-color: #ffffcc; /*#f2f2f2; /*#222;*/
 	border-color: transparent
@@ -207,6 +229,16 @@ a, a:hover, a:focus, a:active, a.active {
 .navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
 	color: #fff;
 	background-color: #ff3300
+}
+
+.navbar-default .navbar-nav > li > a[aria-current="page"],
+.navbar-default .navbar-nav > li > a[aria-current="page"]:hover,
+.navbar-default .navbar-nav > li > a[aria-current="page"]:focus,
+.navbar-default .navbar-nav > li > a[aria-current="true"],
+.navbar-default .navbar-nav > li > a[aria-current="true"]:hover,
+.navbar-default .navbar-nav > li > a[aria-current="true"]:focus {
+    color: #000;
+    background-color: #fed136;
 }
 
 @media (min-width:768px) {
